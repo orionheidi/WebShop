@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	Register:
+	<form action="InsertUserServlet" method="get">
+		username:<input type="text" name="username"/><br/>
+		password:<input type="text" name="password"/><br/>
+		<input type="submit" value="reg"/><br/>
+	</form>
+	<hr/>
+	Remove:
+	<form action="DeleteUserServlet" method="get">
+		id:<input type="text" name="id"/><br/>
+		<input type="submit" value="del"/><br/>
+	</form>
+	<hr/>
+	Find user by id:
+	<form action="FindUserServlet" method="get">
+		id:<input type="text" name="id"/><br/>
+		<input type="submit" value="find"/><br/>
+	</form>
+	<hr/>
+	List users:<br/>
+	<a href="ListUsersServlet">list</a>
+	<hr/>
+	Web shop:<br/>
+	<a href="WebShopServlet">web shop</a>
+</body>
+</html>

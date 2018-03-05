@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<script src="jquery-1.11.0.js">
+	</script>
+	<script>
+	$(document).ready(function () {
+		$.get('ShoppingCartServlet',function (data, status) {
+			for (var i = 0; i < data.length; i++) {
+				$('table').append('<tr><td>'+data[i].product.name+'</td><td>'+data[i].product.price+'</td><td>'+data[i].count+'</td><td>//TODO//</td><td>//TODO//</td></tr>');
+			};
+		});
+	});
+	</script>
+
+</head>
+<body>
+	Proizvodi u korpi:
+	<table>
+		<tr bgcolor="lightgrey">
+			<th>Naziv</th>
+			<th>Jedinicna cena</th>
+			<th>Komada</th>
+			<th>Ukupna cena</th>
+			<th>&nbsp;</th>
+		</tr>
+<!-- 		double total = 0;
+		List<ShoppingCartItem> items = sciDAO.getAll(userId);
+		for ( ShoppingCartItem i : items ) {
+		<tr>
+			<td>" + i.getProduct().getName() + "</td>
+			<td>" + i.getProduct().getPrice() + "</td>
+			<td>" + i.getCount() + "</td>
+			double price = i.getProduct().getPrice() * i.getCount();
+			<td>" + price + "</td>
+			<td><form action="DeleteServlet" method="post">"
+				+ "<input type="hidden" name="id" value="" + i.getId() + "">"
+				+ "<input type="submit" value="delete"></form></td>
+			</tr>
+			total += price;
+		}
+ -->	
+	</table>
+
+	<p>
+		Ukupno: " + total + " dinara.
+	</p>
+
+	<p>
+		<a href="WebShopServlet">Povratak</a>
+	</p>
+
+</body>
+</html>
